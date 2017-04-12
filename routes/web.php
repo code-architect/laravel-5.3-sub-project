@@ -11,6 +11,17 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+// User Registration
+Route::group(['prefix'  =>  '/authentication'], function(){
+    Route::group(['namespace' => 'User\Authentication'], function () {
+
+        Route::get('/register', 'RegistrationController@register');
+
+    });
+});
+
