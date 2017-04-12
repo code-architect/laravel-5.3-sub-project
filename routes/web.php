@@ -21,6 +21,7 @@ Route::group(['prefix'  =>  '/authentication'], function(){
     Route::group(['namespace' => 'User\Authentication'], function () {
 
         Route::get('/register', 'RegistrationController@register');
+        Route::post('/register', 'RegistrationController@postRegister');
 
     });
 });
