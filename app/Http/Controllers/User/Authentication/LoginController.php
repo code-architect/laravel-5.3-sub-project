@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\User\Authentication;
 
+use Sentinel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
 
 class LoginController extends Controller
 {
@@ -15,8 +17,9 @@ class LoginController extends Controller
 
 
     // logging in the registered user
-    public function postLogin()
+    public function postLogin(Request $request)
     {
-
+        Sentinel::authenticate($request->all());
+        return Sentinel::check();
     }
 }

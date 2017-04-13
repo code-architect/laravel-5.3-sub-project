@@ -24,7 +24,7 @@ Route::group(['prefix'  =>  '/authentication'], function(){
         Route::post('/register', 'RegistrationController@postRegister');
 
         Route::get('/login', 'LoginController@login');
-        Route::get('/login', 'LoginController@postLogin');
+        Route::post('/login', 'LoginController@postLogin');
 
     });
 });
