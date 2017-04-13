@@ -1,4 +1,4 @@
-@extends('templates.admin_auth')
+@extends('templates.users.user_auth')
 
 @section('title') User - Login @endsection
 
