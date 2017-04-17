@@ -169,7 +169,13 @@
 										<ul class="dropdown-menu drp-mnu">
 											<li> <a href="#"><i class="fa fa-cog"></i> Settings</a> </li>
 											<li> <a href="#"><i class="fa fa-user"></i> Profile</a> </li>
-											<li> <a href="#"><i class="fa fa-sign-out"></i> Logout</a> </li>
+											<li role="presentation">
+											 <form method="post" action="/authentication/logout" id="logout-form">
+                                                 {{ csrf_field() }}
+                                                  <a href="#" onclick="document.getElementById('logout-form').submit()"><i class="fa fa-sign-out"></i> Logout</a>
+											 </form>
+
+											</li>
 										</ul>
 									</li>
 								</ul>

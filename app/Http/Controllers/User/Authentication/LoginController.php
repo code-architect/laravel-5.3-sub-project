@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 
 class LoginController extends Controller
 {
+
+
     // show the Login form to the user
     public function login()
     {
@@ -20,6 +22,20 @@ class LoginController extends Controller
     public function postLogin(Request $request)
     {
         Sentinel::authenticate($request->all());
-        return Sentinel::check();
+        //Sentinel::check();
+        redirect('/home');
+    }
+
+
+    //logging out the user
+    public function logout()
+    {
+        Sentinel::logout();
+        return redirect('/authentication');
+    }
+
+    public function home()
+    {
+        return view('user.dashboard');
     }
 }

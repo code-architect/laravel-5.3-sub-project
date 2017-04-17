@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\User\Authentication;
 
-use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
+use Sentinel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -19,6 +19,9 @@ class RegistrationController extends Controller
     public function postRegister(Request $request)
     {
         $user = Sentinel::registerAndActivate($request->all());
+
+        $role = Sentinel::findRoleBySlug('user'); // find the role
+        $role->users()->attach($user);              // assign the role to registered user
 
         return redirect('/');
     }
