@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+//https://www.youtube.com/playlist?list=PLwAKR305CRO-Q90J---jXVzbOd4CDRbVx
+
+// Authentication route starts
+Route::group(['prefix'  =>  '/authentication'], function(){
+    Route::group(['namespace' => 'Back\Authentication'], function () {
+
+        Route::get('/register', 'RegistrationController@register');
+        Route::post('/register', 'RegistrationController@postRegister')->name('register');
+
+
+
+    });
+});
+// Authentication route Ends
