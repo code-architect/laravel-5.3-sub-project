@@ -23,7 +23,7 @@ Route::group(['prefix'  =>  '/authentication'], function(){
         Route::get('/register', 'RegistrationController@register');
         Route::post('/register', 'RegistrationController@postRegister')->name('register');
 
-
+        Route::get('/login', 'LoginController@login')->name('login');
 
     });
 });

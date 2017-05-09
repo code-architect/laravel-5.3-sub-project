@@ -6,7 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Shoppy an Admin Panel Category Flat Bootstrap Responsive Website Template | Signup :: w3layouts</title>
+<title>Shoppy an Admin Panel Category Flat Bootstrap Responsive Website Template | Login :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
@@ -23,51 +23,54 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--Google Fonts-->
 <link href='//fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
-<!--//charts-->
+<!--static chart-->
 </head>
 <body>
-<!--inner block start here-->
-<div class="signup-page-main">
-     <div class="signup-main">
-    	 <div class="signup-head">
-				<h1>Sign Up</h1>
+<div class="login-page">
+    <div class="login-main">
+    	 <div class="login-head">
+				<h1>Login</h1>
 			</div>
-			<div class="signup-block">
-				<form action="register" method="post">
-				    {{ csrf_field() }}
-					<input type="text" name="first_name" placeholder="First Name" required="">
-					<input type="text" name="last_name" placeholder="Last Name" required="">
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="password" class="lock" placeholder="Password" required="">
-                    <input type="password" name="password_conformation" class="lock" placeholder="Password conformation" required="">
-
+			<div class="login-block">
+				<form>
+					<input type="text" name="email" placeholder="Email" required="">
+					<input type="password" name="password" class="lock" placeholder="Password">
 					<div class="forgot-top-grids">
 						<div class="forgot-grid">
 							<ul>
-								{{--<li>--}}
-									{{--<input type="checkbox" id="brand1" value="">--}}
-									{{--<label for="brand1"><span></span>I agree to the terms</label>--}}
-								{{--</li>--}}
+								<li>
+									<input type="checkbox" id="brand1" value="">
+									<label for="brand1"><span></span>Remember me</label>
+								</li>
 							</ul>
 						</div>
-
+						<div class="forgot">
+							<a href="#">Forgot password?</a>
+						</div>
 						<div class="clearfix"> </div>
 					</div>
-					<input type="submit" name="Sign In" value="Sign up">
+					<input type="submit" name="Sign In" value="Login">
+					<h3>Not a member?<a href="signup.html"> Sign up now</a></h3>
+					<h2>or login with</h2>
+					<div class="login-icons">
+						<ul>
+							<li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+						</ul>
+					</div>
 				</form>
-				<div class="sign-down">
-				<h4>Already have an account? <a href="login"> Login here.</a></h4>
-				  <h5><a href="index.html">Go Back to Home</a></h5>
-				</div>
+				<h5><a href="index.html">Go Back to Home</a></h5>
 			</div>
-    </div>
+      </div>
 </div>
 <!--inner block end here-->
 <!--copy rights start here-->
 <div class="copyrights">
-	 <p>© {{date('Y')}} Convenient Corner. All Rights Reserved | Developed by Code-Architect</p>
+	 <p>© 2016 Shoppy. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
 </div>
 <!--COPY rights end here-->
+
 <!--scrolling js-->
 		<script src="../js/admin/jquery_nicescroll.js"></script>
 		<script src="../js/admin/scripts.js"></script>
